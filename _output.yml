@@ -1,0 +1,20 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">AGEC-LCI tutorial</a></li>
+      after: |
+        <li><a href="https://ca.linkedin.com/in/ivan-viveros-santos" target="blank">Contact Ivan</a></li>
+    toolbar:
+      position: fixed
+      edit: null
+      download: ["pdf"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  template: template.tex
+bookdown::epub_book: default
