@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Section 4 Selected methods | AGEC-LCI tutorial</title>
+  <meta name="description" content="This a tutorial for AGEC-LCI" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Section 4 Selected methods | AGEC-LCI tutorial" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This a tutorial for AGEC-LCI" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Section 4 Selected methods | AGEC-LCI tutorial" />
+  
+  <meta name="twitter:description" content="This a tutorial for AGEC-LCI" />
+  
+
+<meta name="author" content="Ivan Viveros Santos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="importing-agec-lci-reports-into-lca-software.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<link href="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet" />
+<script src="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+<script src="libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">AGEC-LCI tutorial</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="instructions.html"><a href="instructions.html"><i class="fa fa-check"></i><b>2</b> Instructions for use</a></li>
+<li class="chapter" data-level="3" data-path="importing-agec-lci-reports-into-lca-software.html"><a href="importing-agec-lci-reports-into-lca-software.html"><i class="fa fa-check"></i><b>3</b> Importing AGEC-LCI reports into LCA software</a><ul>
+<li class="chapter" data-level="3.1" data-path="importing-agec-lci-reports-into-lca-software.html"><a href="importing-agec-lci-reports-into-lca-software.html#import-olca"><i class="fa fa-check"></i><b>3.1</b> openLCA</a></li>
+<li class="chapter" data-level="3.2" data-path="importing-agec-lci-reports-into-lca-software.html"><a href="importing-agec-lci-reports-into-lca-software.html#import-simapro"><i class="fa fa-check"></i><b>3.2</b> SimaPro</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="selected-methods.html"><a href="selected-methods.html"><i class="fa fa-check"></i><b>4</b> Selected methods</a><ul>
+<li class="chapter" data-level="4.1" data-path="selected-methods.html"><a href="selected-methods.html#soil-loss"><i class="fa fa-check"></i><b>4.1</b> Soil loss</a></li>
+<li class="chapter" data-level="4.2" data-path="selected-methods.html"><a href="selected-methods.html#emissions-of-ammonia-nh3-to-the-air"><i class="fa fa-check"></i><b>4.2</b> Emissions of ammonia (NH<sub>3</sub>) to the air</a></li>
+<li class="chapter" data-level="4.3" data-path="selected-methods.html"><a href="selected-methods.html#emissions-of-nitrogen-oxides-noxnono2-to-the-air"><i class="fa fa-check"></i><b>4.3</b> Emissions of nitrogen oxides (NOx,NO,NO<sub>2</sub>) to the air</a></li>
+<li class="chapter" data-level="4.4" data-path="selected-methods.html"><a href="selected-methods.html#nitrate-no3--leaching-to-ground-water"><i class="fa fa-check"></i><b>4.4</b> Nitrate (NO<sub>3</sub><sup>-</sup>) leaching to ground water</a></li>
+<li class="chapter" data-level="4.5" data-path="selected-methods.html"><a href="selected-methods.html#emissions-of-nitrous-oxide-n2o-to-air"><i class="fa fa-check"></i><b>4.5</b> Emissions of nitrous oxide (N<sub>2</sub>O) to air</a></li>
+<li class="chapter" data-level="4.6" data-path="selected-methods.html"><a href="selected-methods.html#carbon-dioxide-co2-from-liming-and-urea-application"><i class="fa fa-check"></i><b>4.6</b> Carbon dioxide (CO<sub>2</sub>) from liming and urea application</a></li>
+<li class="chapter" data-level="4.7" data-path="selected-methods.html"><a href="selected-methods.html#phosphorous-emissions"><i class="fa fa-check"></i><b>4.7</b> Phosphorus emissions</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="selected-methods.html"><a href="selected-methods.html#phosphorus-to-river-emission-by-soil-loss"><i class="fa fa-check"></i><b>4.7.1</b> Phosphorus to river (emission by soil loss)</a></li>
+<li class="chapter" data-level="4.7.2" data-path="selected-methods.html"><a href="selected-methods.html#phosphate-to-ground-water-emission-by-leaching"><i class="fa fa-check"></i><b>4.7.2</b> Phosphate to ground water (emission by leaching)</a></li>
+<li class="chapter" data-level="4.7.3" data-path="selected-methods.html"><a href="selected-methods.html#phosphate-to-river-emission-by-run-off"><i class="fa fa-check"></i><b>4.7.3</b> Phosphate to river (emission by run-off)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-agricultural-soil-surface-water-and-ground-water"><i class="fa fa-check"></i><b>4.8</b> Heavy metal emissions to agricultural soil, surface water and ground water</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-agricultural-soils"><i class="fa fa-check"></i><b>4.8.1</b> Heavy metal emissions to agricultural soils</a></li>
+<li class="chapter" data-level="4.8.2" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-river"><i class="fa fa-check"></i><b>4.8.2</b> Heavy metal emissions to river</a></li>
+<li class="chapter" data-level="4.8.3" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-ground-water"><i class="fa fa-check"></i><b>4.8.3</b> Heavy metal emissions to ground water</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://ca.linkedin.com/in/ivan-viveros-santos" target="blank">Contact Ivan</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">AGEC-LCI tutorial</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="selected-methods" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Selected methods</h1>
+<div id="soil-loss" class="section level2">
+<h2><span class="header-section-number">4.1</span> Soil loss</h2>
+<p>In line with the AGRIBALYSE® methodology <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>, soil loss was estimated by applying the USDA RUSLE equation.</p>
+<p><span class="math display">\[A = R\cdot K \cdot L \cdot S \cdot C \cdot P \cdot f\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>A</em>: computed spatial and temporal average soil loss per unit area [t·ha<sup>-1</sup>·yr<sup>-1</sup>]</p></li>
+<li><p><em>R</em>: rainfall-runoff erosivity factor</p></li>
+<li><p><em>K</em>: soil erodibility factor</p></li>
+<li><p><em>L</em>: slope length factor</p></li>
+<li><p><em>S</em>: slope steepness factor</p></li>
+<li><p><em>C</em>: cover-management factor</p></li>
+<li><p><em>P</em>: support practice factor</p></li>
+<li><p><em>f</em>: acre to hectare conversion factor (equal to 2.47)</p></li>
+</ul>
+<p>The AGRIBALYSE ® program computed <em>R</em> and <em>K</em> parameters according to six principal regions of France: central, north, north-east, west, south and south-west. Furthermore, climate and soil profiles were defined for each region <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>.</p>
+</div>
+<div id="emissions-of-ammonia-nh3-to-the-air" class="section level2">
+<h2><span class="header-section-number">4.2</span> Emissions of ammonia (NH<sub>3</sub>) to the air</h2>
+<p>In keeping with the AGRIBALYSE® methodology <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>, emissions of NH<sub>3</sub> from organic fertilizers were calculated by applying the <span class="citation">EMEP-EEA (<a href="#ref-emep-eea2009" role="doc-biblioref">2009</a>)</span> Tier 2. While the emissions of NH<sub>3</sub> resulting from the application of mineral fertilizers were calculated according to the <span class="citation">EMEP-EEA (<a href="#ref-emep-eea2013" role="doc-biblioref">2013</a>)</span> Tier 2, which is in line with the World Food LCA Database (WFLDB) <span class="citation">(Nemecek et al. <a href="#ref-nemecek2014" role="doc-biblioref">2014</a>)</span>. This allowed to consider the effect of both temperature and soil pH in the computation of NH<sub>3</sub> emissions.</p>
+<p>The NH<sub>3</sub> emissions were calculated according to the following equation:</p>
+<p><span class="math display">\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M}(EF_a \cdot p + EF_b \cdot (1-p)) \cdot N_{mineral} \]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>NH<sub>3</sub></em>: ammonia emissions after mineral fertilizer application [kg NH<sub>3</sub>]</p></li>
+<li><p><em>m</em>: fertilizer type (M: number of fertilizer types)</p></li>
+<li><p><em>EF<sub>a</sub></em>: emission factor on soils with pH ≤ 7 [kg NH<sub>3</sub>-N/Kg N]</p></li>
+<li><p><em>EF<sub>b</sub></em>: emission factor on soils with pH &gt; 7 [kg NH<sub>3</sub>-N/Kg N]</p></li>
+<li><p><em>p</em>: fraction of soils with pH ≤ 7 [%/100]</p></li>
+<li><p><em>N<sub>mineral</sub></em>: mineral fertilizer application [kg N]</p></li>
+<li><p><em>17/14</em> is the conversion factor from N to NH<sub>3</sub>.</p></li>
+</ul>
+<p>The above equation was simplified by considering that only one value of pH is reported for a given plot, which implies assuming that the pH is homogeneous in the studied agricultural field. In the equation below, <em>i</em> can take the values <em>EF<sub>a</sub></em> or <em>EF<sub>b</sub></em>, whether the pH is below or above 7.<br />
+<span class="math display">\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M} EF_i \cdot N_{mineral}  \]</span></p>
+</div>
+<div id="emissions-of-nitrogen-oxides-noxnono2-to-the-air" class="section level2">
+<h2><span class="header-section-number">4.3</span> Emissions of nitrogen oxides (NOx,NO,NO<sub>2</sub>) to the air</h2>
+<p>Nitrogen oxides result principally from the nitrification process. In line with the AGRIBALYSE® methodology <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span> and the WFLDB <span class="citation">(Nemecek et al. <a href="#ref-nemecek2014" role="doc-biblioref">2014</a>)</span>, the <span class="citation">EMEP-EEA (<a href="#ref-emep-eea2009" role="doc-biblioref">2009</a>)</span> Tier 1 was applied to calculate nitric oxide emission generated from the application of organic and mineral fertilizers. Regardless of the type of fertilizer (i.e., organic or mineral) the same emission factor is used:</p>
+<ul>
+<li><strong>Emission factor for NOx-N</strong>: 0.012 kg NOx-N/kg N applied</li>
+</ul>
+<p>Prior to the computation of NO emissions, N volatized as NH<sub>3</sub> was substracted from the amount of N applied.</p>
+<p>In ecoinvent, nitrogen oxide emissions are calculated with respect to NO<sub>2</sub>. In consequence, a conversion factor of 46/14 was applied to the calculated emissions in terms of N.</p>
+</div>
+<div id="nitrate-no3--leaching-to-ground-water" class="section level2">
+<h2><span class="header-section-number">4.4</span> Nitrate (NO<sub>3</sub><sup>-</sup>) leaching to ground water</h2>
+<p><span class="citation">Faist Emmenegger, Reinhard, and Zah (<a href="#ref-faist2009" role="doc-biblioref">2009</a>)</span> employed a simple regression model from Willigen (2000) to calculate nitrate leaching to groundwater in the context of the <em>Sustainability Quick Check for Biofuels Project</em>. The main limitation of the SQCB-NO<sub>3</sub> model is that it does not account for soil hydrological and biochemical processes. In consequence, the output of this model must be considered as an estimate of nitrate leaching. Nevertheless, the SQCB-NO<sub>3</sub> model has been applied in AGRIBALYSE® <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>, WFLDB <span class="citation">(Nemecek et al. <a href="#ref-nemecek2014" role="doc-biblioref">2014</a>)</span> and ecoinvent <span class="citation">(Nemecek and Schnetzer <a href="#ref-nemecek2011" role="doc-biblioref">2011</a>)</span> to calculate nitrate leaching in non-European agricultural fields.</p>
+<p>The SQCB-NO3 model was selected over the SALCA-nitrate model because the former was used by AGRIBALYSE ® to calculate nitrate leaching in vineyard fields, which is a research interest of the authors. Furthermore, this model allows to consistently compute nitrate emissions for other crops, and it facilitates updating the VBA application.</p>
+<p>Nitrate emissions were calculated according to the following regression model <span class="citation">(Faist Emmenegger, Reinhard, and Zah <a href="#ref-faist2009" role="doc-biblioref">2009</a>)</span>:</p>
+<p><span class="math display">\[N=21.37 + \frac{P}{c \cdot L} \Big[0.0037 \cdot S + 0.0000601 \cdot N_{org} - 0.00362 \cdot U  \Big]\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>N</em>: quantity of nitrogen leached [kg N·ha<sup>-1</sup>·year<sup>-1</sup>]</p></li>
+<li><p><em>P</em>: precipitation and watering, in mm per year</p></li>
+<li><p><em>c</em>: soil clay content, in basis 100</p></li>
+<li><p><em>L</em>: rooting depth, in meters</p></li>
+<li><p><em>S</em>: nitrogen supply, including crop residues [kg N·ha<sup>-1</sup>]</p></li>
+<li><p><em>N<sub>org</sub></em>: quantity ot nitrogen in the soil organic matter [kg N·ha<sup>-1</sup>]</p></li>
+<li><p><em>U</em>: nitrogen uptake [kg N·ha<sup>-1</sup>]</p></li>
+</ul>
+<p>A conversion factor of 62/14 was applied to the calculated emissions of nitrate in terms of N.</p>
+</div>
+<div id="emissions-of-nitrous-oxide-n2o-to-air" class="section level2">
+<h2><span class="header-section-number">4.5</span> Emissions of nitrous oxide (N<sub>2</sub>O) to air</h2>
+<p>Nitrous oxide (N<sub>2</sub>O) results from nitrification and denitrification processes. The global warming potential (GWP) of N<sub>2</sub>O for a time horizon of 100 years is 310 times the GWP of CO<sub>2</sub> <span class="citation">(IPCC <a href="#ref-IPCC2006" role="doc-biblioref">2006</a>)</span>.</p>
+<p>N<sub>2</sub>O emissions were calculated according to the following equation <span class="citation">(IPCC <a href="#ref-IPCC2006" role="doc-biblioref">2006</a>)</span>:</p>
+<p><span class="math display">\[N_2O = \frac{44}{28} \cdot \bigg (0.01 \cdot \Big(N_{tot} + N_{cr} + \frac{14}{17} \cdot NH_3 + \frac{14}{46} \cdot NOx \Big) + 0.0075 \cdot \frac{14}{62} \cdot NO_3 \bigg)\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>N<sub>2</sub>O</em>: emissions of nitrous oxide [kg N<sub>2</sub>O·ha<sup>-1</sup>]</p></li>
+<li><p><em>N<sub>tot</sub></em> = total nitrogen in mineral and organic fertilizer [kg N·ha<sup>-1</sup>]</p></li>
+<li><p><em>N<sub>cr</sub></em>: nitrogen contained in the crop residues [kg N·ha<sup>-1</sup>]</p></li>
+<li><p><em>NH<sub>3</sub></em>: losses of nitrogen in the form of ammonia [kg NH<sub>3</sub>·ha<sup>-1</sup>]</p></li>
+<li><p><em>NOx</em>: losses of nitrogen in the form of nitrogen oxides [kg NO<sub>2</sub>·ha<sup>-1</sup>]</p></li>
+<li><p><em>NO<sub>3</sub></em>: losses of nitrogen in the form of nitrate [kg NO<sub>3</sub>·ha<sup>-1</sup>]</p></li>
+</ul>
+</div>
+<div id="carbon-dioxide-co2-from-liming-and-urea-application" class="section level2">
+<h2><span class="header-section-number">4.6</span> Carbon dioxide (CO<sub>2</sub>) from liming and urea application</h2>
+<p>The aim of applying lime in agricultural soils is to decrease soil acidity and to improve plant development. The addition of carbonates by means of limestone or dolomite entails the dissolution of carbonate limes and the release of bicarbonate (2HCO<sub>3</sub><sup>-</sup>). Subsequently, the bicarbonate is transformed into CO<sub>2</sub> and water <span class="citation">(IPCC <a href="#ref-IPCC2006" role="doc-biblioref">2006</a>)</span>.</p>
+<p>In agreement with the AGRIBALYSE® methodology <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>, the WFLDB <span class="citation">(Nemecek et al. <a href="#ref-nemecek2014" role="doc-biblioref">2014</a>)</span>, and ecoinvent <span class="citation">(Nemecek and Schnetzer <a href="#ref-nemecek2011" role="doc-biblioref">2011</a>)</span>, carbon dioxide emissions generated from the application of lime and urea were calculated according to <span class="citation">IPCC (<a href="#ref-IPCC2006" role="doc-biblioref">2006</a>)</span> Tier 1. The calculated emissions are based on a worst-case approach because it is considered that the total amount of carbon is released in the form of CO<sub>2</sub>.</p>
+<p>CO<sub>2</sub> emissions from lime application:</p>
+<p><span class="math display">\[CO_2-C_{Emission}=M_{limestone} \cdot EF_{limestone} + M_{dolomite} \cdot EF_{dolomite}\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>CO<sub>2</sub>-C<sub>Emissions</sub></em>: C emissions from lime application, tonnes C·yr<sup>-1</sup></p></li>
+<li><p><em>M</em>: annual amount of calcic limestone or dolomite, tonnes·yr<sup>-1</sup></p></li>
+<li><p><em>EF</em>: emission factor, tonne of C·(tonne of limestone or dolomite)<sup>-1</sup></p></li>
+</ul>
+<table>
+<caption><span id="tab:carbon-dioxide-ef">Table 4.1: </span> EF-Emission factor (kg of C·kg of product<sup>-1</sup>)</caption>
+<thead>
+<tr class="header">
+<th>Product</th>
+<th>EF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Limestone</td>
+<td>0.12</td>
+</tr>
+<tr class="even">
+<td>Dolomite</td>
+<td>0.13</td>
+</tr>
+<tr class="odd">
+<td>Urea</td>
+<td>1.57</td>
+</tr>
+</tbody>
+</table>
+<p>Finally, a factor of 44/12 is applied to transform the emissions in terms of carbon into emissions based on carbon dioxide.</p>
+<p><span class="math display">\[CO_2= \frac{44}{12} \cdot CO_2-C_{Emission}\]</span></p>
+</div>
+<div id="phosphorous-emissions" class="section level2">
+<h2><span class="header-section-number">4.7</span> Phosphorus emissions</h2>
+<p>In agreement with the AGRIBALYSE® methodology <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>, the WFLDB methodology <span class="citation">(Nemecek et al. <a href="#ref-nemecek2014" role="doc-biblioref">2014</a>)</span> and the ecoinvent methodology <span class="citation">(Nemecek and Schnetzer <a href="#ref-nemecek2011" role="doc-biblioref">2011</a>)</span>, emissions of phosphorous to water were calculated by applying the SALCA-P model <span class="citation">(Prasuhn <a href="#ref-prasuhn2006" role="doc-biblioref">2006</a>)</span>.</p>
+<p>The SALCA-P model computes three types of emissions to water according to the mechanism generating them:</p>
+<ul>
+<li>Phosphorus to river (emission by soil loss)</li>
+<li>Phosphate to ground water (emission by leaching).</li>
+<li>Phosphate to river (emission by run-off)</li>
+</ul>
+<div id="phosphorus-to-river-emission-by-soil-loss" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> Phosphorus to river (emission by soil loss)</h3>
+<p>Emissions of phosphorus by soil loss were calculated according to the following equation <span class="citation">(Prasuhn <a href="#ref-prasuhn2006" role="doc-biblioref">2006</a>)</span>:</p>
+<p><span class="math display">\[P_E=A \cdot P_S \cdot F_R \cdot F_{SR} \cdot t\]</span>
+Where:</p>
+<ul>
+<li><p><em>P<sub>E</sub></em>: phosphorus emitted by soil loss to rivers [kg.ha<sup>-1</sup>.yr<sup>-1</sup>]</p></li>
+<li><p><em>A</em>: quantity of soil lost [kg.ha<sup>-1</sup>.yr<sup>-1</sup>]</p></li>
+<li><p><em>t</em>: land occupation time (number of days/365)</p></li>
+</ul>
+<table>
+<caption><span id="tab:phosphorous-river">Table 4.2: </span> Parameters for calculating phosphorous emissions to river <span class="citation">(Prasuhn <a href="#ref-prasuhn2006" role="doc-biblioref">2006</a>)</span></caption>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Definition</th>
+<th>Default value</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>P<sub>S</sub></em></td>
+<td>Phosphorous content in the upper part of the soil</td>
+<td>0.00095</td>
+<td>kg P·kg soil<sup>-1</sup></td>
+</tr>
+<tr class="even">
+<td><em>F<sub>R</sub></em></td>
+<td>Eroded particle enrichment factor</td>
+<td>1.86</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td><em>F<sub>SR</sub></em></td>
+<td>Fraction of soil lost that reaches the river</td>
+<td>0.2</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="phosphate-to-ground-water-emission-by-leaching" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> Phosphate to ground water (emission by leaching)</h3>
+<p>Leaching of phosphate to ground water was calculated according to the following equation <span class="citation">(Prasuhn <a href="#ref-prasuhn2006" role="doc-biblioref">2006</a>)</span>:</p>
+<p><span class="math display">\[P_L=P_{LM} \cdot F_{CSS} \cdot t\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>P<sub>L</sub></em>: leached phosphorus [kg.ha<sup>-1</sup>.yr<sup>-1</sup>]</p></li>
+<li><p><em>P<sub>LM</sub></em>: average quantity of phosphorus leached depending on the land occupation category [kg P.ha<sup>-1</sup>.yr<sup>-1</sup>]</p></li>
+<li><p><em>F<sub>CSS</sub></em>: correction factor for fertilization with slurry and/or sludge (see equation below)</p></li>
+<li><p><em>t</em>: occupation time (number of days/365)</p></li>
+</ul>
+<p>A conversion factor of 95/31 was applied to convert emissions of phosphorus into emissions of phosphate.</p>
+<p><span class="math display">\[F_{CSS}=1+ \frac{0.2 \cdot (P_2O_{5-slurry\: and\: sludge})}{80}\]</span></p>
+</div>
+<div id="phosphate-to-river-emission-by-run-off" class="section level3">
+<h3><span class="header-section-number">4.7.3</span> Phosphate to river (emission by run-off)</h3>
+<p>Emissions of phosphate to river by run-off were calculated according to the following equation <span class="citation">(Prasuhn <a href="#ref-prasuhn2006" role="doc-biblioref">2006</a>)</span>:</p>
+<p><span class="math display">\[P_R=P_{RM} \cdot F_C \cdot F_S \cdot t\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>P<sub>R</sub></em>: phosphorus lost by run-off to the rivers [kg.ha<sup>-1</sup>.yr<sup>-1</sup>]</p></li>
+<li><p><em>P<sub>RM</sub></em>: average quantity of phosphorus lost by run-off depending on the land occupation category [kg P.ha<sup>-1</sup>.yr<sup>-1</sup>]</p></li>
+<li><p><em>F<sub>C</sub></em>: correction factor for the form of phosphorus applied (mineral, liquid/solid organic)</p></li>
+<li><p><em>F<sub>S</sub></em>: slope factor. F<sub>S</sub> = 0 if slope &lt; 3%, F<sub>S</sub>= 1, otherwise.</p></li>
+<li><p><em>t</em>: occupation time (number of days/365)</p></li>
+</ul>
+<p><span class="math display">\[F_C=1+ \frac{0.7 \cdot P_2O_{5-slurry\: and \: sludge} + 0.2 \cdot P_2O_{5-mineral \: fertilizer} + 0.4  \cdot P_2O_{5-manure\: and\: compost}}{80}\]</span></p>
+<p>A conversion factor of 95/31 was applied to convert emissions of phosphorus into emissions of phosphate.</p>
+</div>
+</div>
+<div id="heavy-metal-emissions-to-agricultural-soil-surface-water-and-ground-water" class="section level2">
+<h2><span class="header-section-number">4.8</span> Heavy metal emissions to agricultural soil, surface water and ground water</h2>
+<p>Emissions of heavy metals to soil, ground and surface water are calculated based on a mass balance. The inputs considered are seeds, fertilizers, soil amendments, metal-based pesticides and air deposition. The outputs correspond to the emissions of trace metals into ground and surface water and the products harvested.</p>
+<div id="heavy-metal-emissions-to-agricultural-soils" class="section level3">
+<h3><span class="header-section-number">4.8.1</span> Heavy metal emissions to agricultural soils</h3>
+<p>The mass balance of trace metal <em>(TM) x</em> in soil is calculated according to the following equation <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>:</p>
+<p><span class="math display">\[\Delta F_{TMx}=\sum_{SFPI_y}IN_y \cdot C_{y,x} - \Big (\sum_{PLR_z} OUT_z \cdot C_{z,x} \Big) \cdot Alloc_x \quad \forall x \in \{Cd,Cu,Zn,Pb,Ni,Cr,Hg\}\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>ΔFTMx</em>: Flow into the soil of <em>Trace Metal x (TMx)</em></p></li>
+<li><p><em>INy</em>: Quantity of input <em>SFPIy</em> containing TMx:</p>
+<ul>
+<li><p>Seed</p></li>
+<li><p>Fertilizer (mineral, organic, farm, sludge)</p></li>
+<li><p>Pesticides</p></li>
+<li><p>Sundry Inputs</p></li>
+</ul></li>
+<li><p><em>Cy,x</em>: Content of <em>TMx</em> in input <em>SFPIy</em></p></li>
+<li><p><em>OUTz</em>: Quantity of output <em>PLRz</em> carrying the trace metal <em>TMx</em></p>
+<ul>
+<li><p>Products harvested (including co-products and/or residues exported)</p></li>
+<li><p>Leaching to groundwater</p></li>
+<li><p>Run-off to surface water by soil loss</p></li>
+</ul></li>
+<li><p><em>Cz,x</em>: Content of <em>TMx</em> in output PLRz</p></li>
+<li><p><em>Alloc<sub>x</sub></em>: Allocation factor for TMx output flow. This allocation factor only takes account of part of the output flows from the deposition of trace metals. The allocation is calculated for each trace metal:</p></li>
+</ul>
+<p><span class="math display">\[Alloc_x = \frac{ \sum_{SFPIy}IN_y \cdot T_{y,x}}{ \sum_{SFPIy} IN_y \cdot T_{y,x} + Dep_x}\]</span></p>
+</div>
+<div id="heavy-metal-emissions-to-river" class="section level3">
+<h3><span class="header-section-number">4.8.2</span> Heavy metal emissions to river</h3>
+<p>Trace metal emissions through erosion are calculated according to the following equation <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>:</p>
+<p><span class="math display">\[M_{erosion,TMx} = A \cdot S_{TMx} \cdot F_R \cdot F_{SR} \cdot t \cdot Alloc_x\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>M<sub>erosion,TM</sub>x</em>: emission of trace metal x to river [kg·ha<sup>-1</sup>·yr<sup>-1</sup>]</p></li>
+<li><p><em>A</em>: amount of soil lost [kg·ha<sup>-1</sup>·yr<sup>-1</sup>]</p></li>
+<li><p><em>S<sub>TMx</sub></em>: the content of trace metal x in the upper part of the soil</p></li>
+<li><p><em>F<sub>R</sub></em>: eroded particle enrichment factor</p></li>
+<li><p><em>F<sub>SR</sub></em>: fraction of soil lost which reaches the river</p></li>
+<li><p><em>t</em>: land occupation time (number of days/365)</p></li>
+<li><p><em>Alloc<sub>x</sub></em>: allocation factor for trace metal x</p></li>
+</ul>
+<p>The amount of soil lost was calculated by applying the RUSLE equation. An average concentration of trace metals depending on the soil use was considered. The eroded particle enrichment factor and the fraction of soil lost that reaches the river took the default values considered in the AGRIBALYSE® methodology <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>. Please refer to <a href="selected-methods.html#phosphorous-emissions">Section</a> <a href="selected-methods.html#phosphorous-emissions">4.7</a> to retrieve the last two parameters.</p>
+</div>
+<div id="heavy-metal-emissions-to-ground-water" class="section level3">
+<h3><span class="header-section-number">4.8.3</span> Heavy metal emissions to ground water</h3>
+<p>Trace metal emissions into ground water were calculated according to the following equation <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>:</p>
+<p><span class="math display">\[M_{leachng,TMx} = m_{leaching,TMx} \cdot Alloc_x\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><em>M<sub>leaching,TMx</sub></em>: emission of trace metal x to ground water [kg·ha<sup>-1</sup>·yr<sup>-1</sup>]</p></li>
+<li><p><em>m<sub>leaching,TMx</sub></em>: average emission of trace metal x to ground water [kg·ha<sup>-1</sup>·yr<sup>-1</sup>]</p></li>
+<li><p><em>Alloc<sub>x</sub></em>: allocation factor for trace metal x.</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-emep-eea2009">
+<p>EMEP-EEA. 2009. Web Page. <a href="https://www.eea.europa.eu/publications/emep-eea-emission-inventory-guidebook-2009">https://www.eea.europa.eu/publications/emep-eea-emission-inventory-guidebook-2009</a>.</p>
+</div>
+<div id="ref-emep-eea2013">
+<p>EMEP-EEA. 2013. Web Page. <a href="http://www.eea.europa.eu/publications/emep-eea-guidebook-2013">http://www.eea.europa.eu/publications/emep-eea-guidebook-2013</a>.</p>
+</div>
+<div id="ref-faist2009">
+<p>Faist Emmenegger, M, J Reinhard, and R Zah. 2009. “Sustainability Quick Check for Biofuels–Intermediate Background Report.” Journal Article. <em>With Contributions from T. Ziep, R. Weichbrodt, Prof. Dr. V. Wohlgemuth, FHTW Berlin and A, Roches, R. Freiermuth Knuchel, Dr. G Gaillard, Agroscope Reckenholz-Tänikon, Düendorf, Germany</em>.</p>
+</div>
+<div id="ref-IPCC2006">
+<p>IPCC. 2006. <em>2006 Ipcc Guidelines for National Greenhouse Gas Inventories, Prepared by the National Greenhouse Gas Inventories Programme</em>. Book. IGES, Japan.</p>
+</div>
+<div id="ref-Koch2015">
+<p>Koch, Peter, and Thibault Salou. 2015. <em>AGRIBALYSE: Rapport Méthodologique - Version 1.2</em>. Book. Angers, France: ADEME. <a href="https://www.ademe.fr/sites/default/files/assets/documents/agribalyse-rapport-methodologique-v1_2.pdf">https://www.ademe.fr/sites/default/files/assets/documents/agribalyse-rapport-methodologique-v1_2.pdf</a>.</p>
+</div>
+<div id="ref-nemecek2014">
+<p>Nemecek, Thomas, Xavier Bengoa, J. Lansche, P. Mouron, V. Rossi, and S. Humbert. 2014. “Methodological Guidelines for the Life Cycle Inventory of Agricultural Products. Version 2.0, July 2014.” Journal Article. <em>World Food LCA Database (WFLDB). Quantis and Agroscope, Lausanne and Zurich, Switzerland</em>.</p>
+</div>
+<div id="ref-nemecek2011">
+<p>Nemecek, Thomas, and Julian Schnetzer. 2011. “Methods of Assessment of Direct Field Emissions for Lcis of Agricultural Production Systems. Data V3.0 (2012).” Journal Article. <em>Agroscope Reckenholz-Tänikon Research Station ART</em>.</p>
+</div>
+<div id="ref-prasuhn2006">
+<p>Prasuhn, Volker. 2006. “Erfassung Der Po4-Austräge Für Die ökobilanzierung.” Journal Article. <em>SALCA-Phosphor. Zürich, CH, Agrocope FAL Reckenholz</em>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="importing-agec-lci-reports-into-lca-software.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["agec-lci-tutorial.pdf"],
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed",
+"edit": null,
+"download": "pdf"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

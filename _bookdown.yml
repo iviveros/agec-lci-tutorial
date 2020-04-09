@@ -2,6 +2,7 @@ book_filename: "agec-lci-tutorial"
 language:
   ui:
     chapter_name: "Section "
+output_dir: docs
 delete_merged_file: true
 new_session: yes
 rmd_files:

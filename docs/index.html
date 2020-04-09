@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>AGEC-LCI tutorial</title>
+  <meta name="description" content="This a tutorial for AGEC-LCI" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="AGEC-LCI tutorial" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This a tutorial for AGEC-LCI" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AGEC-LCI tutorial" />
+  
+  <meta name="twitter:description" content="This a tutorial for AGEC-LCI" />
+  
+
+<meta name="author" content="Ivan Viveros Santos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="introduction.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<link href="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet" />
+<script src="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+<script src="libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">AGEC-LCI tutorial</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="instructions.html"><a href="instructions.html"><i class="fa fa-check"></i><b>2</b> Instructions for use</a></li>
+<li class="chapter" data-level="3" data-path="importing-agec-lci-reports-into-lca-software.html"><a href="importing-agec-lci-reports-into-lca-software.html"><i class="fa fa-check"></i><b>3</b> Importing AGEC-LCI reports into LCA software</a><ul>
+<li class="chapter" data-level="3.1" data-path="importing-agec-lci-reports-into-lca-software.html"><a href="importing-agec-lci-reports-into-lca-software.html#import-olca"><i class="fa fa-check"></i><b>3.1</b> openLCA</a></li>
+<li class="chapter" data-level="3.2" data-path="importing-agec-lci-reports-into-lca-software.html"><a href="importing-agec-lci-reports-into-lca-software.html#import-simapro"><i class="fa fa-check"></i><b>3.2</b> SimaPro</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="selected-methods.html"><a href="selected-methods.html"><i class="fa fa-check"></i><b>4</b> Selected methods</a><ul>
+<li class="chapter" data-level="4.1" data-path="selected-methods.html"><a href="selected-methods.html#soil-loss"><i class="fa fa-check"></i><b>4.1</b> Soil loss</a></li>
+<li class="chapter" data-level="4.2" data-path="selected-methods.html"><a href="selected-methods.html#emissions-of-ammonia-nh3-to-the-air"><i class="fa fa-check"></i><b>4.2</b> Emissions of ammonia (NH<sub>3</sub>) to the air</a></li>
+<li class="chapter" data-level="4.3" data-path="selected-methods.html"><a href="selected-methods.html#emissions-of-nitrogen-oxides-noxnono2-to-the-air"><i class="fa fa-check"></i><b>4.3</b> Emissions of nitrogen oxides (NOx,NO,NO<sub>2</sub>) to the air</a></li>
+<li class="chapter" data-level="4.4" data-path="selected-methods.html"><a href="selected-methods.html#nitrate-no3--leaching-to-ground-water"><i class="fa fa-check"></i><b>4.4</b> Nitrate (NO<sub>3</sub><sup>-</sup>) leaching to ground water</a></li>
+<li class="chapter" data-level="4.5" data-path="selected-methods.html"><a href="selected-methods.html#emissions-of-nitrous-oxide-n2o-to-air"><i class="fa fa-check"></i><b>4.5</b> Emissions of nitrous oxide (N<sub>2</sub>O) to air</a></li>
+<li class="chapter" data-level="4.6" data-path="selected-methods.html"><a href="selected-methods.html#carbon-dioxide-co2-from-liming-and-urea-application"><i class="fa fa-check"></i><b>4.6</b> Carbon dioxide (CO<sub>2</sub>) from liming and urea application</a></li>
+<li class="chapter" data-level="4.7" data-path="selected-methods.html"><a href="selected-methods.html#phosphorous-emissions"><i class="fa fa-check"></i><b>4.7</b> Phosphorus emissions</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="selected-methods.html"><a href="selected-methods.html#phosphorus-to-river-emission-by-soil-loss"><i class="fa fa-check"></i><b>4.7.1</b> Phosphorus to river (emission by soil loss)</a></li>
+<li class="chapter" data-level="4.7.2" data-path="selected-methods.html"><a href="selected-methods.html#phosphate-to-ground-water-emission-by-leaching"><i class="fa fa-check"></i><b>4.7.2</b> Phosphate to ground water (emission by leaching)</a></li>
+<li class="chapter" data-level="4.7.3" data-path="selected-methods.html"><a href="selected-methods.html#phosphate-to-river-emission-by-run-off"><i class="fa fa-check"></i><b>4.7.3</b> Phosphate to river (emission by run-off)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-agricultural-soil-surface-water-and-ground-water"><i class="fa fa-check"></i><b>4.8</b> Heavy metal emissions to agricultural soil, surface water and ground water</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-agricultural-soils"><i class="fa fa-check"></i><b>4.8.1</b> Heavy metal emissions to agricultural soils</a></li>
+<li class="chapter" data-level="4.8.2" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-river"><i class="fa fa-check"></i><b>4.8.2</b> Heavy metal emissions to river</a></li>
+<li class="chapter" data-level="4.8.3" data-path="selected-methods.html"><a href="selected-methods.html#heavy-metal-emissions-to-ground-water"><i class="fa fa-check"></i><b>4.8.3</b> Heavy metal emissions to ground water</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://ca.linkedin.com/in/ivan-viveros-santos" target="blank">Contact Ivan</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">AGEC-LCI tutorial</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">AGEC-LCI tutorial</h1>
+<p class="author"><em>Ivan Viveros Santos</em></p>
+<p class="date"><em>April 2020</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<div id="agec-lci-agricultural-emissions-calculator-for-life-cycle-inventory" class="section level4 unnumbered">
+<h4>AGEC-LCI: AGricultural Emissions Calculator for life cycle inventory</h4>
+<p>AGEC-LCI is a VBA tool that generates inventory reports of direct field emissions resulting from the application of soil amendments, fertilizers and metal-based fungicides in agriculture. This tool aims to facilitate the modelling of the foreground process of agricultural systems and to avoid the potential inconsistent linking between life cycle inventory (LCI) and life cycle impact assessment (LCIA) phases.</p>
+</div>
+<div id="about-the-authors-and-contributors" class="section level4 unnumbered">
+<h4>About the authors and contributors</h4>
+<table>
+<colgroup>
+<col width="45%" />
+<col width="54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Co-Authors</th>
+<th>Affiliation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://ca.linkedin.com/in/ivan-viveros-santos" target="_blank">Ivan Viveros Santos</a></td>
+<td><a href="http://www.ciraig.org/fr/" target="_blank">CIRAIG</a>, <a href="https://www.polymtl.ca/gch/" target="_blank">Chemical Engineering Department, Polytechnique Montréal</a></td>
+</tr>
+<tr class="even">
+<td><a href="http://www.elsa-lca.org/?p=137&amp;lang=en" target="_blank">Philippe Roux</a></td>
+<td>ITAP, Irstea, Montpellier SupAgro, <a href="http://www.elsa-lca.org/?lang=en" target="_blank">Elsa Research Group</a>, Univ Montpellier</td>
+</tr>
+<tr class="odd">
+<td><a href="http://www.elsa-lca.org/?tag=carole-sinfort&amp;lang=en" target="_blank">Carole Sinfort</a></td>
+<td>ELSA Research Group, ITAP, SupAgro, Irstea, Univ Montpellier</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.etsmtl.ca/en/research/professors/alevasseur/" target="_blank">Annie Levasseur</a></td>
+<td>Department of Construction Engineering, École de Technologie Supérieure</td>
+</tr>
+<tr class="odd">
+<td><a href="https://professeurs.uqam.ca/professeur/bulle.cecile/" target="_blank">Cécile Bulle</a></td>
+<td>ESG UQAM, Strategy, Corporate &amp; Social Responsibility Department, CIRAIG, Montreal</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.polymtl.ca/expertises/deschenes-louise" target="_blank">Louise Deschênes</a></td>
+<td><a href="http://www.ciraig.org/fr/" target="_blank">CIRAIG</a>, Chemical Engineering Department, Polytechnique Montréal</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="download-the-agec-lci-tool" class="section level4 unnumbered">
+<h4>Download the AGEC-LCI tool</h4>
+<p><img src="Figures/download_icon.png" width="91" /></p>
+<p>Please follow this <a href="" target="_blank">link to download the AGEC-LCI tool</a>.</p>
+</div>
+<div id="participation-at-setac-europe-scicon-virtual-meeting" class="section level4 unnumbered">
+<h4>Participation at SETAC Europe SciCon virtual meeting</h4>
+<p>This work will be presented at the <a href="https://dublin.setac.org/" target="_blank">SETAC Europe 30<sup>th</sup> Annual Meeting <em>“Open Science for Enhanced Global Environmental Protection”</em></a> according to the following details:</p>
+<p><strong>Track:</strong> 5. Life Cycle Assessment and Foot-Printing</p>
+<p><strong>Session:</strong> Quantifying life cycle emissions and environmental impacts of agricultural practices related to pesticides and fertilisers</p>
+<p><strong>Presentation Title:</strong> AGEC-LCI: an open access tool for calculating emissions from fertilizers and metal-based fungicides applications</p>
+<p><strong>Presentation Type:</strong> Platform</p>
+</div>
+<div id="tools-information" class="section level4 unnumbered">
+<h4>Tool’s information</h4>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["agec-lci-tutorial.pdf"],
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed",
+"edit": null,
+"download": "pdf"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
