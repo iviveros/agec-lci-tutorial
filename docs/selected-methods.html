@@ -5,20 +5,20 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 4 Selected methods | AGEC-LCI tutorial</title>
-  <meta name="description" content="This a tutorial for AGEC-LCI" />
+  <meta name="description" content="This is a tutorial for AGEC-LCI" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 4 Selected methods | AGEC-LCI tutorial" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This a tutorial for AGEC-LCI" />
+  <meta property="og:description" content="This is a tutorial for AGEC-LCI" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Section 4 Selected methods | AGEC-LCI tutorial" />
   
-  <meta name="twitter:description" content="This a tutorial for AGEC-LCI" />
+  <meta name="twitter:description" content="This is a tutorial for AGEC-LCI" />
   
 
 <meta name="author" content="Ivan Viveros Santos" />
@@ -149,7 +149,7 @@
 <h2><span class="header-section-number">4.2</span> Emissions of ammonia (NH<sub>3</sub>) to the air</h2>
 <p>In keeping with the AGRIBALYSE® methodology <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>, emissions of NH<sub>3</sub> from organic fertilizers were calculated by applying the <span class="citation">EMEP-EEA (<a href="#ref-emep-eea2009" role="doc-biblioref">2009</a>)</span> Tier 2. While the emissions of NH<sub>3</sub> resulting from the application of mineral fertilizers were calculated according to the <span class="citation">EMEP-EEA (<a href="#ref-emep-eea2013" role="doc-biblioref">2013</a>)</span> Tier 2, which is in line with the World Food LCA Database (WFLDB) <span class="citation">(Nemecek et al. <a href="#ref-nemecek2014" role="doc-biblioref">2014</a>)</span>. This allowed to consider the effect of both temperature and soil pH in the computation of NH<sub>3</sub> emissions.</p>
 <p>The NH<sub>3</sub> emissions were calculated according to the following equation:</p>
-<p><span class="math display">\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M}(EF_a \cdot p + EF_b \cdot (1-p)) \cdot N_{mineral} \]</span></p>
+<p><span class="math display">\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M}(EF_a \cdot p + EF_b \cdot (1-p)) \cdot N \]</span></p>
 <p>Where:</p>
 <ul>
 <li><p><em>NH<sub>3</sub></em>: ammonia emissions after mineral fertilizer application [kg NH<sub>3</sub>]</p></li>
@@ -157,11 +157,11 @@
 <li><p><em>EF<sub>a</sub></em>: emission factor on soils with pH ≤ 7 [kg NH<sub>3</sub>-N/Kg N]</p></li>
 <li><p><em>EF<sub>b</sub></em>: emission factor on soils with pH &gt; 7 [kg NH<sub>3</sub>-N/Kg N]</p></li>
 <li><p><em>p</em>: fraction of soils with pH ≤ 7 [%/100]</p></li>
-<li><p><em>N<sub>mineral</sub></em>: mineral fertilizer application [kg N]</p></li>
+<li><p><em>N</em>: fertilizer application [kg N]</p></li>
 <li><p><em>17/14</em> is the conversion factor from N to NH<sub>3</sub>.</p></li>
 </ul>
 <p>The above equation was simplified by considering that only one value of pH is reported for a given plot, which implies assuming that the pH is homogeneous in the studied agricultural field. In the equation below, <em>i</em> can take the values <em>EF<sub>a</sub></em> or <em>EF<sub>b</sub></em>, whether the pH is below or above 7.<br />
-<span class="math display">\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M} EF_i \cdot N_{mineral}  \]</span></p>
+<span class="math display">\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M} EF_i \cdot N\]</span></p>
 </div>
 <div id="emissions-of-nitrogen-oxides-noxnono2-to-the-air" class="section level2">
 <h2><span class="header-section-number">4.3</span> Emissions of nitrogen oxides (NOx,NO,NO<sub>2</sub>) to the air</h2>
@@ -198,7 +198,7 @@
 <p>Where:</p>
 <ul>
 <li><p><em>N<sub>2</sub>O</em>: emissions of nitrous oxide [kg N<sub>2</sub>O·ha<sup>-1</sup>]</p></li>
-<li><p><em>N<sub>tot</sub></em> = total nitrogen in mineral and organic fertilizer [kg N·ha<sup>-1</sup>]</p></li>
+<li><p><em>N<sub>tot</sub></em>: total nitrogen in mineral and organic fertilizer [kg N·ha<sup>-1</sup>]</p></li>
 <li><p><em>N<sub>cr</sub></em>: nitrogen contained in the crop residues [kg N·ha<sup>-1</sup>]</p></li>
 <li><p><em>NH<sub>3</sub></em>: losses of nitrogen in the form of ammonia [kg NH<sub>3</sub>·ha<sup>-1</sup>]</p></li>
 <li><p><em>NOx</em>: losses of nitrogen in the form of nitrogen oxides [kg NO<sub>2</sub>·ha<sup>-1</sup>]</p></li>

@@ -5,7 +5,7 @@
 
 #### Step 1 {-}
 
-Unzip the compressed folder AGEC-LCI_v1_0.zip that you got from [this site](){target="_blank"}, then open the file AGEC-LCI_v1_0.xlsm (Figure \@ref(fig:agec-icon)).
+Unzip the compressed folder AGEC-LCI_v1_0.zip, then open the file AGEC-LCI_v1_0.xlsm (Figure \@ref(fig:agec-icon)).
 
 \begin{figure}[ht]
 

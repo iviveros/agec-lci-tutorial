@@ -35,7 +35,7 @@ In keeping with the AGRIBALYSE® methodology [@Koch2015], emissions of NH~3~ fro
 									
 The NH~3~ emissions were calculated according to the following equation:
 									
-$$NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M}(EF_a \cdot p + EF_b \cdot (1-p)) \cdot N_{mineral} $$
+$$NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M}(EF_a \cdot p + EF_b \cdot (1-p)) \cdot N $$
 
 Where:
 
@@ -49,13 +49,13 @@ Where:
 
 - *p*: fraction of soils with pH ≤ 7 [%/100]
 
-- *N~mineral~*: mineral fertilizer application [kg N]
+- *N*: fertilizer application [kg N]
 
 - *17/14* is the conversion factor from N to NH~3~.
 
 
 The above equation was simplified by considering that only one value of pH is reported for a given plot, which implies assuming that the pH is homogeneous in the studied agricultural field. In the equation below, *i* can take the values *EF~a~* or *EF~b~*, whether the pH is below or above 7.									
-$$NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M} EF_i \cdot N_{mineral}  $$									
+$$NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M} EF_i \cdot N$$									
 									
 ## Emissions of nitrogen oxides (NOx,NO,NO~2~) to the air
 
@@ -107,7 +107,7 @@ Where:
 
 - *N~2~O*: emissions of nitrous oxide [kg N~2~O·ha^-1^]
 
-- *N~tot~* = total nitrogen in mineral and organic fertilizer [kg N·ha^-1^]
+- *N~tot~*: total nitrogen in mineral and organic fertilizer [kg N·ha^-1^]
 
 - *N~cr~*: nitrogen contained in the crop residues [kg N·ha^-1^]
 

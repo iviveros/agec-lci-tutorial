@@ -136,7 +136,7 @@ AGEC-LCI is a VBA tool that generates inventory reports of direct field emission
 \begin{longtable}[]{@{}ll@{}}
 \toprule
 \begin{minipage}[b]{0.43\columnwidth}\raggedright
-Co-Authors\strut
+Authors\strut
 \end{minipage} & \begin{minipage}[b]{0.51\columnwidth}\raggedright
 Affiliation\strut
 \end{minipage}\tabularnewline
@@ -150,7 +150,7 @@ Affiliation\strut
 \begin{minipage}[t]{0.43\columnwidth}\raggedright
 \href{http://www.elsa-lca.org/?p=137\&lang=en}{Philippe Roux}\strut
 \end{minipage} & \begin{minipage}[t]{0.51\columnwidth}\raggedright
-ITAP, Irstea, Montpellier SupAgro, \href{http://www.elsa-lca.org/?lang=en}{Elsa Research Group}, Univ Montpellier\strut
+ITAP, Irstea, Montpellier SupAgro, \href{http://www.elsa-lca.org/?lang=en}{Elsa Research Group}, \href{http://www.elsa-pact.fr/language/en/}{Chaire ELSA-PACT}, Univ Montpellier\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.43\columnwidth}\raggedright
 \href{http://www.elsa-lca.org/?tag=carole-sinfort\&lang=en}{Carole Sinfort}\strut
@@ -175,13 +175,17 @@ ESG UQAM, Strategy, Corporate \& Social Responsibility Department, CIRAIG, Montr
 \bottomrule
 \end{longtable}
 
+Corresponding author: \href{mailto:ivan.viveros-santos@polymtl.ca}{\nolinkurl{ivan.viveros-santos@polymtl.ca}}
+
+Do not hesitate to contact Ivan if you need help on adding pedo-climatic data, crops or other agricultural inputs unavailable in the tool's database.
+
 \hypertarget{download-the-agec-lci-tool}{%
 \subsubsection*{Download the AGEC-LCI tool}\label{download-the-agec-lci-tool}}
 \addcontentsline{toc}{subsubsection}{Download the AGEC-LCI tool}
 
 \includegraphics[width=2.53in]{Figures/download_icon}
 
-Please follow this \href{}{link to download the AGEC-LCI tool}.
+Please follow this \href{https://drive.google.com/uc?id=1W6N6YtFOAcYjaoyWdH7yVH0TG9iWFRZL\&export=download}{link to download the AGEC-LCI tool}.
 
 \hypertarget{participation-at-setac-europe-scicon-virtual-meeting}{%
 \subsubsection*{Participation at SETAC Europe SciCon virtual meeting}\label{participation-at-setac-europe-scicon-virtual-meeting}}
@@ -196,6 +200,12 @@ This work will be presented at the \href{https://dublin.setac.org/}{SETAC Europe
 \textbf{Presentation Title:} AGEC-LCI: an open access tool for calculating emissions from fertilizers and metal-based fungicides applications
 
 \textbf{Presentation Type:} Platform
+
+\hypertarget{acknowledgments}{%
+\subsubsection*{Acknowledgments}\label{acknowledgments}}
+\addcontentsline{toc}{subsubsection}{Acknowledgments}
+
+This work was supported by \href{https://www.nserc-crsng.gc.ca/index_eng.asp}{Natural Sciences and Engineering Research Council of Canada} grant number {[}RDCPJ 451916-13{]} in collaboration with Hydro-Québec and the Société des Alcools du Québec.
 
 \hypertarget{tools-information}{%
 \subsubsection*{Tool's information}\label{tools-information}}
@@ -358,7 +368,7 @@ Synthetic pesticides\strut
 \subsubsection*{Step 1}\label{step-1}}
 \addcontentsline{toc}{subsubsection}{Step 1}
 
-Unzip the compressed folder AGEC-LCI\_v1\_0.zip that you got from \href{}{this site}, then open the file AGEC-LCI\_v1\_0.xlsm (Figure \ref{fig:agec-icon}).
+Unzip the compressed folder AGEC-LCI\_v1\_0.zip, then open the file AGEC-LCI\_v1\_0.xlsm (Figure \ref{fig:agec-icon}).
 
 \begin{figure}[ht]
 
@@ -593,7 +603,7 @@ In keeping with the AGRIBALYSE® methodology \citep{Koch2015}, emissions of NH\t
 
 The NH\textsubscript{3} emissions were calculated according to the following equation:
 
-\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M}(EF_a \cdot p + EF_b \cdot (1-p)) \cdot N_{mineral} \]
+\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M}(EF_a \cdot p + EF_b \cdot (1-p)) \cdot N \]
 
 Where:
 
@@ -609,13 +619,13 @@ Where:
 \item
   \emph{p}: fraction of soils with pH ≤ 7 {[}\%/100{]}
 \item
-  \emph{N\textsubscript{mineral}}: mineral fertilizer application {[}kg N{]}
+  \emph{N}: fertilizer application {[}kg N{]}
 \item
   \emph{17/14} is the conversion factor from N to NH\textsubscript{3}.
 \end{itemize}
 
 The above equation was simplified by considering that only one value of pH is reported for a given plot, which implies assuming that the pH is homogeneous in the studied agricultural field. In the equation below, \emph{i} can take the values \emph{EF\textsubscript{a}} or \emph{EF\textsubscript{b}}, whether the pH is below or above 7.\\
-\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M} EF_i \cdot N_{mineral}  \]
+\[NH_3=\frac{17}{14} \cdot \sum_{m=1}^{M} EF_i \cdot N\]
 
 \hypertarget{emissions-of-nitrogen-oxides-noxnono2-to-the-air}{%
 \section{\texorpdfstring{Emissions of nitrogen oxides (NOx,NO,NO\textsubscript{2}) to the air}{Emissions of nitrogen oxides (NOx,NO,NO2) to the air}}\label{emissions-of-nitrogen-oxides-noxnono2-to-the-air}}
@@ -679,7 +689,7 @@ Where:
 \item
   \emph{N\textsubscript{2}O}: emissions of nitrous oxide {[}kg N\textsubscript{2}O·ha\textsuperscript{-1}{]}
 \item
-  \emph{N\textsubscript{tot}} = total nitrogen in mineral and organic fertilizer {[}kg N·ha\textsuperscript{-1}{]}
+  \emph{N\textsubscript{tot}}: total nitrogen in mineral and organic fertilizer {[}kg N·ha\textsuperscript{-1}{]}
 \item
   \emph{N\textsubscript{cr}}: nitrogen contained in the crop residues {[}kg N·ha\textsuperscript{-1}{]}
 \item
