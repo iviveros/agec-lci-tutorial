@@ -13,7 +13,7 @@ Unzip the compressed folder AGEC-LCI_v1_0.zip, then open the file AGEC-LCI_v1_0.
 
 }
 
-\caption{AGEC-LCI is stored in a macro-enabbled workbook}(\#fig:agec-icon)
+\caption{AGEC-LCI is stored in a macro-enabled workbook}(\#fig:agec-icon)
 \end{figure}
 
 

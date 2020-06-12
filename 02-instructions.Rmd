@@ -14,7 +14,7 @@ if(!knitr:::is_html_output())
 
 Unzip the compressed folder AGEC-LCI_v1_0.zip, then open the file AGEC-LCI_v1_0.xlsm (Figure \@ref(fig:agec-icon)).
 
-```{r agec-icon,echo=FALSE,fig.align='center',out.width="15%",fig.cap="AGEC-LCI is stored in a macro-enabbled workbook"}
+```{r agec-icon,echo=FALSE,fig.align='center',out.width="15%",fig.cap="AGEC-LCI is stored in a macro-enabled workbook"}
 knitr::include_graphics("Figures/agec_lci_icon.PNG")
 ```
 
