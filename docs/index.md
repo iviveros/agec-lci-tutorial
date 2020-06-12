@@ -1,7 +1,7 @@
 --- 
 title: "AGEC-LCI tutorial"
 author: "Ivan Viveros Santos"
-date: "June 2020"
+date: "April 2020"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
