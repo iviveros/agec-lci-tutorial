@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.31)  21 APR 2020 11:12
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.31)  12 JUN 2020 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -826,8 +826,8 @@ Package rerunfilecheck Info: File `agec-lci-tutorial.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  15417 strings out of 481765
- 281336 string characters out of 5934635
- 607328 words of memory out of 5000000
+ 281337 string characters out of 5934635
+ 607327 words of memory out of 5000000
  32138 multiletter control sequences out of 15000+600000
  549098 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

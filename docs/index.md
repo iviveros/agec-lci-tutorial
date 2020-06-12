@@ -1,7 +1,7 @@
 --- 
 title: "AGEC-LCI tutorial"
 author: "Ivan Viveros Santos"
-date: "April 2020"
+date: "June 2020"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -28,12 +28,12 @@ AGEC-LCI is a VBA tool that generates inventory reports of direct field emission
 
 |Authors | Affiliation | 
 |-----------|-------------|
-|[Ivan Viveros Santos](https://ca.linkedin.com/in/ivan-viveros-santos){target="_blank"}|[CIRAIG](http://www.ciraig.org/fr/){target="_blank"}, [Chemical Engineering Department, Polytechnique Montréal](https://www.polymtl.ca/gch/){target="_blank"}|
-|[Philippe Roux](http://www.elsa-lca.org/?p=137&lang=en){target="_blank"}|ITAP, Irstea, Montpellier SupAgro, [Elsa Research Group](http://www.elsa-lca.org/?lang=en){target="_blank"}, [Chaire ELSA-PACT](http://www.elsa-pact.fr/language/en/){target="_blank"}, Univ Montpellier|
+|[Ivan Viveros Santos](https://ca.linkedin.com/in/ivan-viveros-santos){target="_blank"}|[CIRAIG](http://ciraig.org){target="_blank"}, [Chemical Engineering Department, Polytechnique Montréal](https://www.polymtl.ca/gch/){target="_blank"}|
+|[Philippe Roux](http://www.elsa-lca.org/?p=137&lang=en){target="_blank"}|ITAP, Irstea, Montpellier SupAgro, [Elsa Research Group](http://www.elsa-lca.org/?lang=en){target="_blank"}, [Chaire ELSA-PACT](https://www6.inrae.fr/elsa-pact/){target="_blank"}, Univ Montpellier|
 |[Carole Sinfort](http://www.elsa-lca.org/?tag=carole-sinfort&lang=en){target="_blank"}|ELSA Research Group, ITAP, SupAgro, Irstea, Univ Montpellier| 
 |[Annie Levasseur](https://www.etsmtl.ca/en/research/professors/alevasseur/){target="_blank"}|Department of Construction Engineering, École de Technologie Supérieure|
-|[Cécile Bulle](https://professeurs.uqam.ca/professeur/bulle.cecile/){target="_blank"}|[CIRAIG](http://www.ciraig.org/fr/){target="_blank"}, ESG UQAM, Strategy, Corporate & Social Responsibility Department|
-|[Louise Deschênes](https://www.polymtl.ca/expertises/deschenes-louise){target="_blank"}| [CIRAIG](http://www.ciraig.org/fr/){target="_blank"}, Chemical Engineering Department, Polytechnique Montréal|
+|[Cécile Bulle](https://professeurs.uqam.ca/professeur/bulle.cecile/){target="_blank"}|[CIRAIG](http://ciraig.org){target="_blank"}, ESG UQAM, Strategy, Corporate & Social Responsibility Department|
+|[Louise Deschênes](https://www.polymtl.ca/expertises/deschenes-louise){target="_blank"}| [CIRAIG](http://ciraig.org){target="_blank"}, Chemical Engineering Department, Polytechnique Montréal|
 
 Corresponding author: ivan.viveros-santos@polymtl.ca
 
@@ -58,7 +58,7 @@ This work will be presented at the [SETAC Europe 30^th^ Annual Meeting *"Open Sc
 
 **Presentation Type:** Platform
 
-#### Acknowledgments {-}
+#### Acknowledgements {-}
 
 This work was supported by [Natural Sciences and Engineering Research Council of Canada](https://www.nserc-crsng.gc.ca/index_eng.asp){target="_blank"} grant number [RDCPJ 451916-13] in collaboration with Hydro-Québec and the Société des Alcools du Québec.
 
