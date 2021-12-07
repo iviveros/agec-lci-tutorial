@@ -194,16 +194,20 @@
 <h2><span class="header-section-number">4.5</span> Emissions of nitrous oxide (N<sub>2</sub>O) to air</h2>
 <p>Nitrous oxide (N<sub>2</sub>O) results from nitrification and denitrification processes. The global warming potential (GWP) of N<sub>2</sub>O for a time horizon of 100 years is 310 times the GWP of CO<sub>2</sub> <span class="citation">(IPCC <a href="#ref-IPCC2006" role="doc-biblioref">2006</a>)</span>.</p>
 <p>N<sub>2</sub>O emissions were calculated according to the following equation <span class="citation">(IPCC <a href="#ref-IPCC2006" role="doc-biblioref">2006</a>)</span>:</p>
-<p><span class="math display">\[N_2O = \frac{44}{28} \cdot \bigg (0.01 \cdot \Big(N_{tot} + N_{cr} + \frac{14}{17} \cdot NH_3 + \frac{14}{46} \cdot NOx \Big) + 0.0075 \cdot \frac{14}{62} \cdot NO_3 \bigg)\]</span></p>
+<p><span class="math display">\[N_2O = \frac{44}{28} \cdot \bigg (0.01 \cdot \Big(N_{tot} + N_{cr} + N_{som} + \frac{14}{17} \cdot NH_3 + \frac{14}{46} \cdot NOx \Big) + 0.0075 \cdot \frac{14}{62} \cdot NO_3 \bigg)\]</span></p>
 <p>Where:</p>
 <ul>
 <li><p><em>N<sub>2</sub>O</em>: emissions of nitrous oxide [kg N<sub>2</sub>O·ha<sup>-1</sup>]</p></li>
 <li><p><em>N<sub>tot</sub></em>: total nitrogen in mineral and organic fertilizer [kg N·ha<sup>-1</sup>]</p></li>
 <li><p><em>N<sub>cr</sub></em>: nitrogen contained in the crop residues [kg N·ha<sup>-1</sup>]</p></li>
+<li><p><em>N<sub>som</sub></em>: nitrogen from mineralisation of soil organic matter [kg N·ha<sup>-1</sup>]</p></li>
 <li><p><em>NH<sub>3</sub></em>: losses of nitrogen in the form of ammonia [kg NH<sub>3</sub>·ha<sup>-1</sup>]</p></li>
 <li><p><em>NOx</em>: losses of nitrogen in the form of nitrogen oxides [kg NO<sub>2</sub>·ha<sup>-1</sup>]</p></li>
 <li><p><em>NO<sub>3</sub></em>: losses of nitrogen in the form of nitrate [kg NO<sub>3</sub>·ha<sup>-1</sup>]</p></li>
 </ul>
+<p>With:</p>
+<p><span class="math display">\[N_{som}=N_{org} \cdot MR\]</span></p>
+<p><em>MR:</em>:Mineralisation rate (1.6 %) - SQCB-NO3 (Faist Emmenegger et al., 2009).</p>
 </div>
 <div id="carbon-dioxide-co2-from-liming-and-urea-application" class="section level2">
 <h2><span class="header-section-number">4.6</span> Carbon dioxide (CO<sub>2</sub>) from liming and urea application</h2>
@@ -372,7 +376,7 @@ Where:</p>
 <div id="heavy-metal-emissions-to-ground-water" class="section level3">
 <h3><span class="header-section-number">4.8.3</span> Heavy metal emissions to ground water</h3>
 <p>Trace metal emissions into ground water were calculated according to the following equation <span class="citation">(Koch and Salou <a href="#ref-Koch2015" role="doc-biblioref">2015</a>)</span>:</p>
-<p><span class="math display">\[M_{leachng,TMx} = m_{leaching,TMx} \cdot Alloc_x\]</span></p>
+<p><span class="math display">\[M_{leachng,TMx} = m_{leaching,TMx} \cdot t \cdot Alloc_x\]</span></p>
 <p>Where:</p>
 <ul>
 <li><p><em>M<sub>leaching,TMx</sub></em>: emission of trace metal x to ground water [kg·ha<sup>-1</sup>·yr<sup>-1</sup>]</p></li>
