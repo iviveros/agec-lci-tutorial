@@ -2,7 +2,7 @@ This is a tutorial for **AGEC-LCI**: AGricultural Emissions Calculator for life 
 
 # Description
 
-🛠️ AGEC-LCI is a VBA tool that generates inventory reports of direct field emissions resulting from the application of soil amendments, fertilizers, and metal-based fungicides in agriculture. This tool aims to facilitate the modelling of the foreground of agricultural systems and to avoid the potential inconsistent linking between life cycle inventory (LCI) and life cycle impact assessment (LCIA) phases.
+🛠️ AGEC-LCI is a VBA tool that generates inventory reports of direct field emissions resulting from the application of soil amendments, fertilizers, and metal-based fungicides in agriculture. This tool aims to facilitate modelling the foreground processes of agricultural systems and avoid the potential inconsistent linking between life cycle inventory (LCI) and life cycle impact assessment (LCIA) phases.
 
 # Contents
 
