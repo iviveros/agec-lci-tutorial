@@ -11,4 +11,4 @@ This is a tutorial for **AGEC-LCI**: AGricultural Emissions Calculator for life 
 
 📚 **Recommended citation**
 
-Viveros Santos, I., Roux, P., Bulle, C., Levasseur, A. et Deschênes, L.. 2020. AGEC-LCI: an open access tool for calculating emissions from fertilizers and metal-based fungicides applications. SETAC Europe 30th Annual Meeting. https://iviveros.github.io/agec-lci-tutorial/
+Viveros Santos, I., Roux, P., Bulle, C., Levasseur, A., Deschênes, L.. 2020. AGEC-LCI: an open access tool for calculating emissions from fertilizers and metal-based fungicides applications. SETAC Europe 30th Annual Meeting. https://iviveros.github.io/agec-lci-tutorial/
