@@ -6,7 +6,7 @@ This is a tutorial for **AGEC-LCI**: AGricultural Emissions Calculator for life 
 
 # Contents
 
-🔗 This document can be accessed following this <a href="https://iviveros.github.io/agec-lci-tutorial/" target="_blank">link</a>
+🔗 The tutorial can be accessed following this <a href="https://iviveros.github.io/agec-lci-tutorial/" target="_blank">link</a>
 
 
 📚 **Recommended citation**
